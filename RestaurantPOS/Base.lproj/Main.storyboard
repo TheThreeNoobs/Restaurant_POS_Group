@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Special Requests-->
         <scene sceneID="X9y-dB-iUR">
             <objects>
                 <viewController id="s95-BR-STu" sceneMemberID="viewController">
@@ -18,14 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="5v9-Xa-TFy"/>
+                    <tabBarItem key="tabBarItem" title="Special Requests" id="5v9-Xa-TFy"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icX-o9-qgq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2085" y="453"/>
         </scene>
-        <!--Item 1-->
+        <!--Active Orders-->
         <scene sceneID="tSV-lh-jxa">
             <objects>
                 <viewController id="kbv-lB-ULR" customClass="ChefFirstViewController" customModule="RestaurantPOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="H3z-a3-DG6"/>
+                    <tabBarItem key="tabBarItem" title="Active Orders" image="iconmonstr-menu-5-32" id="H3z-a3-DG6"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="chefToMain" id="WbB-aZ-ycB"/>
@@ -157,13 +157,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sales" id="1yH-zy-0Og"/>
+                    <tabBarItem key="tabBarItem" title="Sales" image="iconmonstr-coin-1-32" id="1yH-zy-0Og"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UqM-1O-cc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="10" y="151"/>
         </scene>
-        <!--Item 2-->
+        <!--Active Orders-->
         <scene sceneID="uHn-D1-Evs">
             <objects>
                 <viewController id="d9X-ZO-Nib" sceneMemberID="viewController">
@@ -176,14 +176,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="bnX-iX-MrP"/>
+                    <tabBarItem key="tabBarItem" title="Active Orders" image="iconmonstr-layer-10-32" id="bnX-iX-MrP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHl-LI-K3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1030" y="1853"/>
         </scene>
-        <!--Item 1-->
+        <!--Menu-->
         <scene sceneID="pVk-aP-S2o">
             <objects>
                 <viewController id="NiD-ei-ZPN" customClass="StaffFirstViewController" customModule="RestaurantPOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -216,7 +216,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="y5I-UU-dZT"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="iconmonstr-menu-5-32" id="y5I-UU-dZT"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="staffToMain" id="KCF-2r-eMq"/>
@@ -286,7 +286,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" id="PhE-3C-vJ2"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="iconmonstr-menu-5-32" id="PhE-3C-vJ2"/>
                     <connections>
                         <outlet property="menuTable" destination="E7h-fq-F8b" id="hVM-7A-BO2"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="managerToMain" id="RAU-mc-Iam"/>
@@ -316,7 +316,12 @@
             <point key="canvasLocation" x="-606" y="-151"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconmonstr-coin-1-32" width="32" height="32"/>
+        <image name="iconmonstr-layer-10-32" width="32" height="32"/>
+        <image name="iconmonstr-menu-5-32" width="32" height="32"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RAU-mc-Iam"/>
+        <segue reference="WbB-aZ-ycB"/>
     </inferredMetricsTieBreakers>
 </document>
