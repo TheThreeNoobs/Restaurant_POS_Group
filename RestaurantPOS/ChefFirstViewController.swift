@@ -24,7 +24,7 @@ class ChefFirstViewController: UIViewController {
     
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
-        self.performSegueWithIdentifier("chefToMain", sender: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName("userDidLogoutNotification", object: nil)
     }
 
     /*

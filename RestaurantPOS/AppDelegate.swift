@@ -25,6 +25,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+//        if PFUser.currentUser() != nil {
+//            print("There is a current user")
+//            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewControllerWithIdentifier("ManagerFirst")
+//            window?.rootViewController = vc
+//            // if there is a logged in user then load the home view controller
+//        }
+
+        
+        
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("userDidLogoutNotification", object: nil, queue: NSOperationQueue.mainQueue()) { (NSNotification) -> Void in
+            print("User has logged out")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateInitialViewController()
+            self.window?.rootViewController = vc
+        }
+        
         // Override point for customization after application launch.
         return true
     }

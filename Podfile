@@ -5,5 +5,6 @@ use_frameworks!
 
 target 'RestaurantPOS' do
     pod 'Parse'
+    pod ‘ParseUI’
 end
 

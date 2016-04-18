@@ -24,7 +24,7 @@ class StaffFirstViewController: UIViewController {
     
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
-        self.performSegueWithIdentifier("staffToMain", sender: nil)
+        NSNotificationCenter.defaultCenter().postNotificationName("userDidLogoutNotification", object: nil)
     }
 
     /*
