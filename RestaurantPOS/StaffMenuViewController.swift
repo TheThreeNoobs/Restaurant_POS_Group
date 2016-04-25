@@ -1,66 +1,34 @@
 //
-//  ManagerFirst.swift
+//  StaffMenuViewController.swift
 //  RestaurantPOS
 //
-//  Created by Parth Bhardwaj on 4/6/16.
+//  Created by Shakeel Daswani on 4/24/16.
 //  Copyright © 2016 TheThreeNoobs. All rights reserved.
 //
 
 import UIKit
 import Parse
-import MBProgressHUD
 
+class StaffMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
-class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var menuTable: UITableView!
     var posts: [PFObject]?
-
-    func loadDataFromNetwork() {
-        
-        // ... Create the NSURLRequest (myRequest) ...
-        
-        // Configure session so that completion handler is executed on main UI thread
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
-            delegate:nil,
-            delegateQueue:NSOperationQueue.mainQueue()
-        )
-        
-        // Display HUD right before the request is made
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        
-        
-        showMenu()
-        
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(showMenu(),
-                                                                      completionHandler: { (data, response, error) in
-                                                                        
-                                                                        // Hide HUD once the network request comes back (must be done on main UI thread)
-                                                                        MBProgressHUD.hideHUDForView(self.view, animated: true)
-                                                                        
-                                                                        // ... Remainder of response handling code ...
-                                                                        
-        });
-        task.resume()
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         menuTable.delegate = self
         menuTable.dataSource = self
         self.menuTable.reloadData()
         
         
-       // showMenu()
+        showMenu()
         
         
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -97,13 +65,32 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         return cell
     }
-
+    
     
     @IBAction func onLogout(sender: AnyObject) {
         PFUser.logOut()
         NSNotificationCenter.defaultCenter().postNotificationName("userDidLogoutNotification", object: nil)
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let cell=sender as! UITableViewCell
+        let indexPath=menuTable.indexPathForCell(cell)
+        let menuPost = posts![indexPath!.row]
+        let nametext = menuPost["name"] as? String
+        let svc = segue.destinationViewController as! OrderingViewController
+        svc.name=nametext
+        svc.price=menuPost["price"] as? String
+        
+        
+        print("seg called")
+//        if (segue.identifier == "takeOrder") {
+//            var svc = segue.destinationViewController as! OrderingViewController;
+        
+            
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -115,4 +102,4 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     */
 
-}
+

@@ -20,6 +20,9 @@ class AddMenuViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        menuDescription.layer.cornerRadius = 5
+        menuDescription.layer.borderWidth = 1
+        menuDescription.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
         // Do any additional setup after loading the view.
     }
 
@@ -38,8 +41,8 @@ class AddMenuViewController: UIViewController, UIImagePickerControllerDelegate, 
         post["price"] = price
         post["menuDescription"] = menuDescription
         post["name"] = name
-        post["likesCount"] = 0
-        post["commentsCount"] = 0
+//        post["likesCount"] = 0
+//        post["commentsCount"] = 0
         
         // Save object (following function will save the object in Parse asynchronously)
         post.saveInBackgroundWithBlock(completion)

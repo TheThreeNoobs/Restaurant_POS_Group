@@ -30,6 +30,8 @@ class MenuTableViewCell: UITableViewCell {
         }
     }
     
+//    var menuNameText = self.menuName.text
+    
     
     
 

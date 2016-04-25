@@ -6,5 +6,6 @@ use_frameworks!
 target 'RestaurantPOS' do
     pod 'Parse'
     pod ‘ParseUI’
+    pod ‘MBProgressHUD’
 end
 

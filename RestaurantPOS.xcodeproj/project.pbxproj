@@ -14,10 +14,12 @@
 		5AA29DD61CB487D2000B58E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA29DD51CB487D2000B58E4 /* Assets.xcassets */; };
 		5AA29DD91CB487D2000B58E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AA29DD71CB487D2000B58E4 /* LaunchScreen.storyboard */; };
 		5ABE78521CB48AC8006EA1A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABE78511CB48AC8006EA1A4 /* LoginViewController.swift */; };
-		5ABF521A1CB5B93A00991F4F /* StaffFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF52191CB5B93A00991F4F /* StaffFirstViewController.swift */; };
 		5ABF521C1CB5B9C600991F4F /* ChefFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF521B1CB5B9C600991F4F /* ChefFirstViewController.swift */; };
 		5AEA5BAA1CB5CA1600501057 /* ManagerFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEA5BA91CB5CA1600501057 /* ManagerFirst.swift */; };
 		BF1DBA501CBDC9600054AA4C /* AddMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */; };
+		BF1E0A821CC99F8E00654D3F /* OrderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */; };
+		BF97FC4A1CCD58B80018C108 /* StaffMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97FC491CCD58B80018C108 /* StaffMenuViewController.swift */; };
+		BF97FC4C1CCD945A0018C108 /* balfjhvslkhgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */; };
 		BFBBDAFF1CC47322009A86D3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +33,13 @@
 		5AA29DD81CB487D2000B58E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AA29DDA1CB487D2000B58E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ABE78511CB48AC8006EA1A4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		5ABF52191CB5B93A00991F4F /* StaffFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffFirstViewController.swift; sourceTree = "<group>"; };
 		5ABF521B1CB5B9C600991F4F /* ChefFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChefFirstViewController.swift; sourceTree = "<group>"; };
 		5AEA5BA91CB5CA1600501057 /* ManagerFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerFirst.swift; sourceTree = "<group>"; };
 		A377C1AF6EFBFE0A98D958EE /* Pods-RestaurantPOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantPOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestaurantPOS/Pods-RestaurantPOS.release.xcconfig"; sourceTree = "<group>"; };
 		BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenuViewController.swift; sourceTree = "<group>"; };
+		BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderingViewController.swift; sourceTree = "<group>"; };
+		BF97FC491CCD58B80018C108 /* StaffMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffMenuViewController.swift; sourceTree = "<group>"; };
+		BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = balfjhvslkhgViewController.swift; sourceTree = "<group>"; };
 		BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D243ACB7E0951299F52A5B9A /* Pods_RestaurantPOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantPOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,14 +89,16 @@
 				5AA29DD01CB487D2000B58E4 /* ViewController.swift */,
 				5AA29DD21CB487D2000B58E4 /* Main.storyboard */,
 				5AEA5BA91CB5CA1600501057 /* ManagerFirst.swift */,
+				BF97FC491CCD58B80018C108 /* StaffMenuViewController.swift */,
 				5ABF521B1CB5B9C600991F4F /* ChefFirstViewController.swift */,
-				5ABF52191CB5B93A00991F4F /* StaffFirstViewController.swift */,
 				5ABE78511CB48AC8006EA1A4 /* LoginViewController.swift */,
 				5AA29DD51CB487D2000B58E4 /* Assets.xcassets */,
 				5AA29DD71CB487D2000B58E4 /* LaunchScreen.storyboard */,
 				5AA29DDA1CB487D2000B58E4 /* Info.plist */,
 				BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */,
+				BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */,
 				BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */,
+				BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */,
 			);
 			path = RestaurantPOS;
 			sourceTree = "<group>";
@@ -141,6 +147,7 @@
 				TargetAttributes = {
 					5AA29DCA1CB487D2000B58E4 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = TVMD7XVDMN;
 					};
 				};
 			};
@@ -229,13 +236,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEA5BAA1CB5CA1600501057 /* ManagerFirst.swift in Sources */,
+				BF97FC4A1CCD58B80018C108 /* StaffMenuViewController.swift in Sources */,
 				5ABE78521CB48AC8006EA1A4 /* LoginViewController.swift in Sources */,
 				BFBBDAFF1CC47322009A86D3 /* MenuTableViewCell.swift in Sources */,
 				BF1DBA501CBDC9600054AA4C /* AddMenuViewController.swift in Sources */,
 				5AA29DD11CB487D2000B58E4 /* ViewController.swift in Sources */,
+				BF1E0A821CC99F8E00654D3F /* OrderingViewController.swift in Sources */,
 				5ABF521C1CB5B9C600991F4F /* ChefFirstViewController.swift in Sources */,
+				BF97FC4C1CCD945A0018C108 /* balfjhvslkhgViewController.swift in Sources */,
 				5AA29DCF1CB487D2000B58E4 /* AppDelegate.swift in Sources */,
-				5ABF521A1CB5B93A00991F4F /* StaffFirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +358,13 @@
 			baseConfigurationReference = 1FE9F0FB7B140A4C72C47294 /* Pods-RestaurantPOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantPOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-TheThreeNoobs.RestaurantPOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -362,10 +374,13 @@
 			baseConfigurationReference = A377C1AF6EFBFE0A98D958EE /* Pods-RestaurantPOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantPOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-TheThreeNoobs.RestaurantPOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
