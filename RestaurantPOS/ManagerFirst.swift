@@ -18,43 +18,36 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     func loadDataFromNetwork() {
         
-        // ... Create the NSURLRequest (myRequest) ...
-        
-        // Configure session so that completion handler is executed on main UI thread
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
-            delegate:nil,
-            delegateQueue:NSOperationQueue.mainQueue()
-        )
         
         // Display HUD right before the request is made
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         
         
+        
         showMenu()
         
-        let task : NSURLSessionDataTask = session.dataTaskWithRequest(showMenu(),
-                                                                      completionHandler: { (data, response, error) in
+        
+        // Hide HUD once the network request comes back (must be done on main UI thread)
+        MBProgressHUD.hideHUDForView(self.view, animated: true)
                                                                         
-                                                                        // Hide HUD once the network request comes back (must be done on main UI thread)
-                                                                        MBProgressHUD.hideHUDForView(self.view, animated: true)
+        // ... Remainder of response handling code ...
                                                                         
-                                                                        // ... Remainder of response handling code ...
-                                                                        
-        });
-        task.resume()
     }
 
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        loadDataFromNetwork()
         menuTable.delegate = self
         menuTable.dataSource = self
         self.menuTable.reloadData()
         
         
-       // showMenu()
+       
         
         
         

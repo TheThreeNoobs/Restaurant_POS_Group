@@ -26,9 +26,9 @@ class balfjhvslkhgViewController: UIViewController {
         
         
         let workingTable = activOrders["8"]
-        let removingDish = workingTable["foodItem"]
+       // let removingDish = workingTable["foodItem"]
         
-        removingDish.deleteInBackground()
+     //   removingDish.deleteInBackground()
         
         // Do any additional setup after loading the view.
     }
