@@ -25,14 +25,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-//        if PFUser.currentUser() != nil {
-//            print("There is a current user")
-//            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("ManagerFirst")
-//            window?.rootViewController = vc
-//            // if there is a logged in user then load the home view controller
-//        }
+        if let user = PFUser.currentUser() {
+            if user.username=="manager"{
+                let staffPage = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("manager")
+                self.window?.rootViewController = staffPage
+            }else if user.username=="staff"{
+                //performSegueWithIdentifier("staff", sender: nil)
+                let staffPage = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("staff")
+                self.window?.rootViewController = staffPage
+            }else if user.username=="chef"{
+                let staffPage = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("chef")
+                self.window?.rootViewController = staffPage
+            }
+        }
 
         
         

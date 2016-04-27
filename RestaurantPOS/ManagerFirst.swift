@@ -41,11 +41,11 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         
         
-        loadDataFromNetwork()
+      //  loadDataFromNetwork()
         menuTable.delegate = self
         menuTable.dataSource = self
         self.menuTable.reloadData()
-        
+        loadDataFromNetwork()
         
        
         

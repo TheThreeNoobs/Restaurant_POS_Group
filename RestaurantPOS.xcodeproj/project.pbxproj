@@ -19,7 +19,6 @@
 		BF1DBA501CBDC9600054AA4C /* AddMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */; };
 		BF1E0A821CC99F8E00654D3F /* OrderingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */; };
 		BF97FC4A1CCD58B80018C108 /* StaffMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97FC491CCD58B80018C108 /* StaffMenuViewController.swift */; };
-		BF97FC4C1CCD945A0018C108 /* balfjhvslkhgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */; };
 		BFBBDAFF1CC47322009A86D3 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 		BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMenuViewController.swift; sourceTree = "<group>"; };
 		BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderingViewController.swift; sourceTree = "<group>"; };
 		BF97FC491CCD58B80018C108 /* StaffMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffMenuViewController.swift; sourceTree = "<group>"; };
-		BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = balfjhvslkhgViewController.swift; sourceTree = "<group>"; };
 		BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D243ACB7E0951299F52A5B9A /* Pods_RestaurantPOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantPOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,7 +94,6 @@
 				5AA29DD71CB487D2000B58E4 /* LaunchScreen.storyboard */,
 				5AA29DDA1CB487D2000B58E4 /* Info.plist */,
 				BF1DBA4F1CBDC9600054AA4C /* AddMenuViewController.swift */,
-				BF97FC4B1CCD945A0018C108 /* balfjhvslkhgViewController.swift */,
 				BFBBDAFE1CC47322009A86D3 /* MenuTableViewCell.swift */,
 				BF1E0A811CC99F8E00654D3F /* OrderingViewController.swift */,
 			);
@@ -243,7 +240,6 @@
 				5AA29DD11CB487D2000B58E4 /* ViewController.swift in Sources */,
 				BF1E0A821CC99F8E00654D3F /* OrderingViewController.swift in Sources */,
 				5ABF521C1CB5B9C600991F4F /* ChefFirstViewController.swift in Sources */,
-				BF97FC4C1CCD945A0018C108 /* balfjhvslkhgViewController.swift in Sources */,
 				5AA29DCF1CB487D2000B58E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +353,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FE9F0FB7B140A4C72C47294 /* Pods-RestaurantPOS.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantPOS/Info.plist;
@@ -373,7 +368,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A377C1AF6EFBFE0A98D958EE /* Pods-RestaurantPOS.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RestaurantPOS/Info.plist;

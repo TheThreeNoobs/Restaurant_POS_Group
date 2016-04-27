@@ -8,21 +8,43 @@
 
 import UIKit
 import Parse
+import MBProgressHUD
 
 class StaffMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var menuTable: UITableView!
     var posts: [PFObject]?
     
+    
+    
+    func loadDataFromNetwork() {
+        
+        
+        // Display HUD right before the request is made
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        
+        
+        
+        showMenu()
+        
+        
+        // Hide HUD once the network request comes back (must be done on main UI thread)
+        MBProgressHUD.hideHUDForView(self.view, animated: true)
+        
+        // ... Remainder of response handling code ...
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //loadDataFromNetwork()
         menuTable.delegate = self
         menuTable.dataSource = self
         self.menuTable.reloadData()
         
         
-        showMenu()
+        loadDataFromNetwork()
         
         
         
