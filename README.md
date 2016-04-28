@@ -1,27 +1,33 @@
-# Group Project - *Restaurant POS*
+# Group Project - *CrunchE*
 
-**Restaurant POS** is an app that allows for users to take orders at restaurants, keep track of sales, and synchronizes real-time data between various users (staff, management, and the kitchen).
+**CrunchE** is an app that allows for users to take orders at restaurants, keep track of sales, and synchronizes real-time data between various users (staff, management, and the kitchen). 
 
-Time spent: **x** hours spent in total
+**Management** - Has the capability to construct the menu by adding or deleting items. He can keep track of the overall sales of the restaurant by viewing how much of each item is sold and what is the overall best-selling item. 
+**Staff** - Has the capaability to take orders by clicking on an item from the menu which will be added to the order of that particular table. 
+**Chef** - Has the capability to delete items off of the Active Orders tab which then increments the revenue of each item in the sales tab. 
+
+Time spent: **12** days spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
-- [ ] Management can add/delete from menu. 
-- [ ] Custom cells should have the proper Auto Layout constraints.
-- [ ] Staff can take order and have them updated throughout various users. 
-- [ ] Management can keep track of sales.
-- [ ] Management can add tabs to divide the menu (entree, dessert, etc).
-- [ ] There are three different logins/users (staff, management, kitchen).
+- [x] Management can add/delete from menu. 
+- [x] Custom cells should have the proper Auto Layout constraints.
+- [x] Staff can take order and have them updated throughout various users. 
+- [x] Management can keep track of sales.
+- [x] There are three different logins/users (staff, management, kitchen).
+- [x] The menu can refresh once a new item is added to the menu. 
 
 The following **optional** features are implemented:
 
 - [ ] Communication between various users (messages displayed on screen for alerts such as "throw out the trash").
    - [ ] Occupancy per week/month/year.
-   - [ ] Displays all time best seller based on data. 
-- [ ] Separate Checks
+   - [x] Displays all time best seller based on data. 
+- [ ] Separate Checks.
 - [ ] Add a modifiers section to the item screen. 
+- [ ] Timer for active tables to make sure food is delivered on time.  
+
 
 The following **additional** features are implemented:
 
@@ -43,7 +49,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
+CrunchE is designed to aid restaurant management in various facets of restaurant work. It is designed to make the process of ordering, managing staff and keeping track of sales a much easier process. A restaurant workforce has to deal with many issues in his day to day job, so our app is meant to make the work life easier for the manager and the rest of the staff in their daily work. 
 
 
 ## Parse Table
