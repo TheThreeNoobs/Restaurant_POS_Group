@@ -18,6 +18,7 @@ class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var menuName: UILabel!
     @IBOutlet weak var priceName: UILabel!
     @IBOutlet weak var menuDescription: UILabel!
+    var objectId: String?
   
     
     var menuPost: PFObject! {
@@ -26,6 +27,7 @@ class MenuTableViewCell: UITableViewCell {
             self.menuName.text = menuPost["name"] as? String
             self.priceName.text = menuPost["price"] as? String
             self.menuDescription.text = menuPost["menuDescription"] as? String
+            self.objectId = menuPost["_id"] as? String
             self.menuPic.loadInBackground()
         }
     }

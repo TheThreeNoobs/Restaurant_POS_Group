@@ -16,6 +16,16 @@ class StaffMenuViewController: UIViewController, UITableViewDelegate, UITableVie
     var posts: [PFObject]?
     
     
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        
+        showMenu()
+        refreshControl.endRefreshing()
+        self.menuTable.reloadData()
+        
+    }
+
+    
+    
     
     func loadDataFromNetwork() {
         
@@ -38,6 +48,13 @@ class StaffMenuViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
+        //This line displays the spinning refresh
+        menuTable.insertSubview(refreshControl, atIndex: 0)
+
         //loadDataFromNetwork()
         menuTable.delegate = self
         menuTable.dataSource = self
@@ -60,7 +77,7 @@ class StaffMenuViewController: UIViewController, UITableViewDelegate, UITableVie
     func showMenu() {
         let query = PFQuery(className: "Post")
         query.orderByDescending("createdAt")
-        query.limit = 20
+        query.limit = 40
         query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
             if let posts = posts {
                 // do something with the array of object returned by the call

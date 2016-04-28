@@ -15,6 +15,15 @@ import MBProgressHUD
 class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var menuTable: UITableView!
     var posts: [PFObject]?
+    
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+    self.menuTable.reloadData()
+    showMenu()
+    refreshControl.endRefreshing()
+    self.menuTable.reloadData()
+    
+    }
 
     func loadDataFromNetwork() {
         
@@ -38,6 +47,11 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.menuTable.reloadData()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
+        //This line displays the spinning refresh
+        menuTable.insertSubview(refreshControl, atIndex: 0)
 
         
         
@@ -48,7 +62,7 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
         loadDataFromNetwork()
         
        
-        
+        self.menuTable.reloadData()
         
         
         // Do any additional setup after loading the view.
@@ -63,7 +77,7 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
     func showMenu() {
         let query = PFQuery(className: "Post")
         query.orderByDescending("createdAt")
-        query.limit = 20
+        query.limit = 40
         query.findObjectsInBackgroundWithBlock { (posts: [PFObject]?, error: NSError?) -> Void in
             if let posts = posts {
                 // do something with the array of object returned by the call
@@ -76,13 +90,15 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //self.menuTable.reloadData()
         return posts?.count ?? 0
-        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuTableViewCell
+      //  self.menuTable.reloadData()
         cell.menuPost = posts![indexPath.row]
+        //self.menuTable.reloadData()
         
         
         
@@ -96,6 +112,9 @@ class ManagerFirst: UIViewController, UITableViewDelegate, UITableViewDataSource
         PFUser.logOut()
         NSNotificationCenter.defaultCenter().postNotificationName("userDidLogoutNotification", object: nil)
     }
+    
+    
+    
     
 
     /*

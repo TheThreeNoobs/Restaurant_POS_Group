@@ -63,9 +63,10 @@ class AddMenuViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBAction func addToMenuButton(sender: AnyObject) {
        postUserImage(uploadImage.image, withPrice: self.priceName.text, withCaption: self.menuDescription.text, withName: self.itemName.text, withCompletion: nil)
-       self.performSegueWithIdentifier("successfullyPosted", sender: nil)
+       // self.performSegueWithIdentifier("successfullyPosted", sender: nil)
         
-    
+        ManagerFirst().menuTable?.reloadData()
+            
     }
 
     @IBAction func uploadImageButton(sender: AnyObject) {
